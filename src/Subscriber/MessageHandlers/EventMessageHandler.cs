@@ -30,7 +30,6 @@ namespace Subscriber.MessageHandlers
 
         public async Task Handle(EventMessage eventMessage, IMessageHandlerContext context)
         {
-            await Task.Delay(1000).ConfigureAwait(false);
             _eventMessageDeleter.Delete(eventMessage.MessageId);
             await ConsoleUtilities.WriteLineAsyncWithColor(ConsoleColor.Blue, $"Consumed message: {eventMessage.MessageId}").ConfigureAwait(false);
         }

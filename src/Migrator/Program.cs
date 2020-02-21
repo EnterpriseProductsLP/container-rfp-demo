@@ -26,7 +26,7 @@ namespace Migrator
         private static int Main(string[] args)
         {
             // Completely wrong, intolerant way to way for SQL Server to start.
-            Thread.Sleep(10000);
+            Thread.Sleep(20000);
 
             var connectionStringArg = args.SingleOrDefault();
 
